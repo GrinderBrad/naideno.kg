@@ -35,7 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.Web" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -51,6 +53,16 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\naideno.Core\naideno.Core.csproj">
+      <Project>{2011db0b-5603-4db7-abbc-866a3d14b5e2}</Project>
+      <Name>naideno.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\naideno.WebUI\naideno.WebUI.csproj">
+      <Project>{82ebedbb-4430-4c93-8c5f-f6b703d760a8}</Project>
+      <Name>naideno.WebUI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
